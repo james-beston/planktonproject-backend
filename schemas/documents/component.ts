@@ -17,6 +17,19 @@ export default {
       }
     },
     {
+      name: 'group',
+      title: 'Group',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'Phytoplankton', value: 'phytoplankton' },
+          { title: 'Zooplankton', value: 'zooplankton' },
+          { title: 'Other', value: 'other' },
+        ]
+      }
+    },
+    {
       name: 'species',
       title: 'Species',
       type: 'array',
