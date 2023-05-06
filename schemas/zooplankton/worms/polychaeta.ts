@@ -1,6 +1,6 @@
 export default {
-  name: 'diatoms',
-  title: 'Diatoms',
+  name: 'polychaeta',
+  title: 'Polychaeta',
   type: 'document',
   fields: [
     {

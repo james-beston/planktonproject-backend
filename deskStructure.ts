@@ -1,4 +1,6 @@
 import { HiOutlineHome, HiOutlineInformationCircle, HiOutlineBookOpen  } from 'react-icons/hi';
+import { RiMoneyPoundCircleLine } from 'react-icons/ri';
+import { TbSchool } from 'react-icons/tb';
 
 export const siteStructure = (S: any) =>
   S.list()
@@ -21,44 +23,179 @@ export const siteStructure = (S: any) =>
             .documentId('about')
         ),
       S.listItem()
+        .title('Fundraising')
+        .icon(RiMoneyPoundCircleLine)
+        .child(
+          S.document()
+            .schemaType('page')
+            .documentId('fundraising')
+        ),
+      S.listItem()
+        .title('Education & Outreach')
+        .icon(TbSchool)
+        .child(
+          S.document()
+            .schemaType('page')
+            .documentId('education')
+        ),
+      S.listItem()
+        .title('Blog Posts')
+        .schemaType('post')
+        .child(
+          S.documentTypeList('post')
+            .title('Blog Posts')
+        ),
+      S.listItem()
         .title('Directory')
         .icon(HiOutlineBookOpen)
-        .schemaType('group')
         .child(
           S.list()
             .title('Directory')
             .items([
               S.listItem()
                 .title('Phytoplankton')
-                .schemaType('group')
                 .child(
-                  S.documentList()
+                  S.list()
                     .title('Phytoplankton')
-                    .filter('_type == "component" && group == "phytoplankton"')
-                    .child(
-                      S.list()
-                        .title('Components')
-                        .items([
-                          S.listItem()
-                            .title('Components')
-                            .schemaType('component')
-                            .child(
-                              S.documentList()
-                                .title('Components')
-                                .schemaType('species')
-                            ),
-                        ])
-                    )
+                    .items([
+                      S.listItem()
+                        .title('Diatoms')
+                        .schemaType('diatoms')
+                        .child(
+                          S.documentTypeList('diatoms')
+                            .title('Diatoms')
+                        ),
+                      S.listItem()
+                        .title('Dinoflagalletes')
+                        .schemaType('dinoflagalletes')
+                        .child(
+                          S.documentTypeList('dinoflagalletes')
+                            .title('Dinoflagalletes')
+                        ),
+                      S.listItem()
+                        .title('Other')
+                        .schemaType('otherPhytoplankton')
+                        .child(
+                          S.documentTypeList('otherPhytoplankton')
+                            .title('Other')
+                        ),
+                    ])
                 ),
               S.listItem()
                 .title('Zooplankton')
-                .schemaType('group')
                 .child(
-                  S.documentList()
+                  S.list()
                     .title('Zooplankton')
-                    .filter('_type == "component" && group == "zooplankton"')
+                    .items([
+                      S.listItem()
+                        .title('Crustaceans')
+                        .child(
+                          S.list()
+                            .title('Crustaceans')
+                            .items([
+                              S.listItem()
+                                .title('Copepods')
+                                .schemaType('copepods')
+                                .child(
+                                  S.documentTypeList('copepods')
+                                    .title('Copepods')
+                                ),
+                              S.listItem()
+                                .title('Nauplii')
+                                .schemaType('nauplii')
+                                .child(
+                                  S.documentTypeList('nauplii')
+                                    .title('Nauplii')
+                                ),
+                              S.listItem()
+                                .title('Zoea')
+                                .schemaType('zoea')
+                                .child(
+                                  S.documentTypeList('zoea')
+                                    .title('Zoea')
+                                ),
+                              S.listItem()
+                                .title('Other')
+                                .schemaType('otherCrustaceans')
+                                .child(
+                                  S.documentTypeList('otherCrustaceans')
+                                    .title('Other')
+                                ),
+                            ])
+                        ),
+                        S.listItem()
+                          .title('Molluscs')
+                          .schemaType('molluscs')
+                          .child(
+                            S.documentTypeList('molluscs')
+                              .title('Molluscs')
+                          ),
+                        S.listItem()
+                          .title('Worms')
+                          .child(
+                            S.list()
+                              .title('Worms')
+                              .items([
+                                S.listItem()
+                                  .title('Platyhelmithes')
+                                  .schemaType('platyhelmithes')
+                                  .child(
+                                    S.documentTypeList('platyhelmithes')
+                                      .title('Platyhelmithes')
+                                  ),
+                                S.listItem()
+                                  .title('Polychaeta')
+                                  .schemaType('polychaeta')
+                                  .child(
+                                    S.documentTypeList('polychaeta')
+                                      .title('Polychaeta')
+                                  ),
+                                S.listItem()
+                                  .title('Other')
+                                  .schemaType('otherWorms')
+                                  .child(
+                                    S.documentTypeList('otherWorms')
+                                      .title('Other')
+                                  ),
+                              ])
+                          ),
+                        S.listItem()
+                          .title('Cnidaria')
+                          .schemaType('cnidaria')
+                          .child(
+                            S.documentTypeList('cnidaria')
+                              .title('Cnidaria')
+                          ),
+                        S.listItem()
+                          .title('Foraminifera')
+                          .schemaType('foraminifera')
+                          .child(
+                            S.documentTypeList('foraminifera')
+                              .title('Foraminifera')
+                          ),
+                        S.listItem()
+                          .title('Ciliates')
+                          .schemaType('ciliates')
+                          .child(
+                            S.documentTypeList('ciliates')
+                              .title('Ciliates')
+                          ),
+                        S.listItem()
+                          .title('Other')
+                          .schemaType('otherZooplankton')
+                          .child(
+                            S.documentTypeList('otherZooplankton')
+                              .title('Other')
+                          ),
+                    ])
                 ),
-                ])
-
+              S.listItem()
+                .title('Other')
+                .schemaType('otherSpecies')
+                .child(
+                  S.documentTypeList('otherSpecies')
+                    .title('Other')
+                ),
+            ])
         ),
-    ]);
+    ])

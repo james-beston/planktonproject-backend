@@ -1,6 +1,6 @@
 export default {
-  name: 'diatoms',
-  title: 'Diatoms',
+  name: 'ciliates',
+  title: 'Ciliates',
   type: 'document',
   fields: [
     {

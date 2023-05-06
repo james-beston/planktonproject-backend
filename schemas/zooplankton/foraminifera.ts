@@ -1,6 +1,6 @@
 export default {
-  name: 'group',
-  title: 'Group',
+  name: 'foraminifera',
+  title: 'Foraminifera',
   type: 'document',
   fields: [
     {
@@ -17,17 +17,9 @@ export default {
       }
     },
     {
-      name: 'image',
-      title: 'Main Image',
-      type: 'image',
-      options: {
-        hotspot: true
-      }
+      name: 'data',
+      title: 'Data',
+      type: 'species-data'
     },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'content'
-    }
   ]
 }

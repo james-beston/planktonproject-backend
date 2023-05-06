@@ -1,6 +1,6 @@
 export default {
-  name: 'diatoms',
-  title: 'Diatoms',
+  name: 'otherCrustaceans',
+  title: 'Other Crustaceans',
   type: 'document',
   fields: [
     {
