@@ -39,6 +39,13 @@ export const siteStructure = (S: any) =>
             .documentId('education')
         ),
       S.listItem()
+        .title('Pages')
+        .schemaType('page')
+        .child(
+          S.documentTypeList('page')
+            .title('Other Pages')
+        ),
+      S.listItem()
         .title('Blog Posts')
         .schemaType('post')
         .child(
