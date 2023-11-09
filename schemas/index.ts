@@ -10,7 +10,7 @@ import speciesData from './objects/species-data';
 
 // Phytoplankton
 import diatoms from './phytoplankton/diatoms';
-import dinoflagalletes from './phytoplankton/dinoflagalletes';
+import dinoflagellates from './phytoplankton/dinoflagellates';
 import otherPhytoplankton from './phytoplankton/other-phytoplankton';
 
 // Zooplankton: Crustaceans
@@ -39,7 +39,7 @@ export const schemaTypes = [
   content,
   copepods,
   diatoms,
-  dinoflagalletes,
+  dinoflagellates,
   foraminifera,
   home,
   molluscs,

@@ -21,5 +21,14 @@ export default {
       title: 'Data',
       type: 'species-data'
     },
-  ]
+  ],
+  orderings: [
+    {
+      title: 'Title',
+      name: 'title',
+      by: [
+        {field: 'title', direction: 'asc'}
+      ]
+    }
+  ],
 }

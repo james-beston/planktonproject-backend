@@ -66,11 +66,11 @@ export const siteStructure = (S: any) =>
                             .title('Diatoms')
                         ),
                       S.listItem()
-                        .title('Dinoflagalletes')
-                        .schemaType('dinoflagalletes')
+                        .title('Dinoflagellates')
+                        .schemaType('dinoflagellates')
                         .child(
-                          S.documentTypeList('dinoflagalletes')
-                            .title('Dinoflagalletes')
+                          S.documentTypeList('dinoflagellates')
+                            .title('Dinoflagellates')
                         ),
                       S.listItem()
                         .title('Other')

@@ -1,6 +1,6 @@
 export default {
-  name: 'dinoflagalletes',
-  title: 'Dinoflagalletes',
+  name: 'dinoflagellates',
+  title: 'Dinoflagellates',
   type: 'document',
   fields: [
     {
