@@ -6,6 +6,8 @@ import otherSpecies from './documents/other-species';
 
 // Objects
 import content from './objects/content';
+import dimensions from './objects/dimensions';
+import presence from './objects/presence';
 import speciesData from './objects/species-data';
 
 // Phytoplankton
@@ -39,6 +41,7 @@ export const schemaTypes = [
   content,
   copepods,
   diatoms,
+  dimensions,
   dinoflagellates,
   foraminifera,
   home,
@@ -53,6 +56,7 @@ export const schemaTypes = [
   platyhelmithes,
   polychaeta,
   post,
+  presence,
   speciesData,
   zoea,
 ]

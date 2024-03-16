@@ -5,6 +5,7 @@ import {schemaTypes} from './schemas'
 import {siteStructure} from './deskStructure'
 import { dashboardTool } from '@sanity/dashboard'
 import { netlifyWidget } from 'sanity-plugin-dashboard-widget-netlify'
+import { table } from '@sanity/table';
 
 export default defineConfig({
   name: 'default',
@@ -18,6 +19,7 @@ export default defineConfig({
       structure: siteStructure
     }),
     visionTool(),
+    table(),
     dashboardTool({ widgets: [
       netlifyWidget({
         title: 'My Netlify deploys',
